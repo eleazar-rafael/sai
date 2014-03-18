@@ -1,0 +1,573 @@
+
+/* Media Queries */
+
+/*
+	320 - 599 (iPhone, Android)
+	600 - 1024 (iPad Portrait, Galaxy Tab Portrait, iPad Landscape, Galaxy Tab Landscape)
+	> 1024 (Desktops)
+*/
+
+
+/* Screens >= 600px AND <= 1024px */
+
+@media only screen and (min-width: 600px) and (max-width : 1024px) {
+
+	/* Core styles ------------------ 
+	---------------------------------*/
+	
+	div#sidebar
+	{
+		width:100px;
+	}
+	
+	div#container
+	{
+		margin-left:106px;
+	}
+	
+	div#sidebar-stitch
+	{
+		left:89px;
+	}
+	
+	div#sidebar-bg
+	{
+		width:100px;
+	}
+	
+	div#searchbox
+	{
+		margin:0 10px 10px 6px;
+		padding:3px;
+	}
+	
+	div#searchbox .search-input
+	{
+		width:45px;
+		padding:1px;
+		font-size:82.5%;
+	}
+	
+	div#searchbox .search-submit
+	{
+		margin-left:58px;
+		width:20px;
+		height:20px;
+	}
+
+	div#navigation ul li a, 
+	div#navigation ul li span
+	{
+		text-align:center;
+	}
+	
+	div#navigation ul li a.i-24, 
+	div#navigation ul li span.i-24, 
+	div#navigation ul li a.ic, 
+	div#navigation ul li span.ic
+	{
+		padding:0;
+		padding-top:40px;
+		padding-bottom:6px;
+		background-position:center 8px;
+	}
+	
+	div#navigation ul li ul li a, 
+	div#navigation ul li ul li span
+	{
+		padding:4px 0;
+		text-align:center;
+	}
+	
+	div#navigation ul li span.nav-tooltip
+	{
+		font-size:11px;
+		position:absolute;
+		line-height:16px;
+		margin:0; right:auto;
+		left:60%; top:-4px;
+		background:#c00;
+		z-index:99999;
+		height:16px; min-width:12px;
+		padding:0 2px;
+		color:#ffffff !important;
+		
+		-webkit-box-shadow:none;
+		-moz-box-shadow:none;
+		-o-box-shadow:none;
+		-khtml-box-shadow:none;
+		box-shadow:none;				
+	}
+	
+	div#footer
+	{
+		left:106px;
+	}
+}
+
+/* Screens <= 768px */
+
+@media only screen and (max-width: 768px) {
+	/* Form styles ------------------ 
+	---------------------------------*/
+	
+	.form .form-inline label, 
+	.form .form-inline .form-item
+	{
+		display:block;
+		width:100%;
+		margin:0;
+		float:none;
+	}
+	
+	.form .form-inline label
+	{
+		padding-top:0;
+	}
+	
+	.form .form-inline ul.form-list
+	{
+		float:none;
+		width:auto;
+		display:block;
+	}
+	
+	.form ul.form-list.inline li
+	{
+		float:none;
+		margin-right:0;
+	}
+	
+	/* Report styles ---------------- 
+	---------------------------------*/
+	
+	.report
+	{
+		min-width:140px;
+		height:60px;
+		font-size:82.5%;
+	}
+	
+	.report .report-content .report-value
+	{
+		font-size:21px;
+	}
+		
+	.report .report-content .report-title
+	{
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		display:block;
+	}
+}
+
+/* Screens <= 599px */
+
+@media only screen and (max-width : 599px) {
+
+	/* Core styles ------------------ 
+	---------------------------------*/
+	
+	div#logo-container
+	{
+		float:none;
+		display:block;
+		width:auto;
+		height:40px;
+		background:url(../../images/core/dark-bg.png) repeat;
+	}
+	
+	div#logo-container #logo-wrap
+	{
+		width:100px;
+		height:40px;
+	}
+	
+	div#logo-container #logo-wrap img
+	{
+		max-width:100px;
+		max-height:40px;
+	}
+	
+	div#sidebar
+	{
+		float:none;
+		width:100%;
+		padding-top:102px;
+		
+		/* CSS 3 */
+		
+		-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25);
+		-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25);
+		-o-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25);
+		-khtml-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25);
+		box-shadow:0 1px 4px rgba(0, 0, 0, 0.25);
+	}
+	
+	div#header
+	{
+		height:auto;
+		border-top:4px solid;
+		border-bottom:0;
+		background-position:left 40px;
+	}
+	
+	div#header #user-tools
+	{
+		margin:auto;
+		padding:6px 0;
+	}
+	
+	div#header #user-info, 
+	div#header #user-tools
+	{
+		float:none;
+		width:auto;
+	}
+	
+	div#header #user-info
+	{
+		margin-left:90px;
+	}
+	
+	div#user-tools .dropdown-menu
+	{
+		margin:4px 6px 0 6px;
+	}
+	
+	div#user-tools .dropdown-menu .dropdown-box
+	{
+		left:0;
+		
+		/* CSS 3 */
+		
+		-webkit-border-radius:0 6px 6px 6px;
+		-khtml-border-radius:0 6px 6px 6px;
+		-moz-border-radius:0 6px 6px 6px;
+		-o-border-radius:0 6px 6px 6px;
+		border-radius:0 6px 6px 6px;
+	}
+	
+	div#container
+	{
+		font-size:0.9em !important;
+	}
+	
+	div#container .container
+	{
+		float:left;
+		margin:0 2%;
+		width:96%;
+		padding-bottom:0;
+	}
+	
+	
+	div#sidebar-bg
+	{
+		width:100%;
+		height:100%;
+		z-index:-100;
+	}
+	
+	div#sidebar-stitch
+	{
+		display:none;
+	}
+	
+	div#container
+	{
+		margin-left:0px;
+		padding-top:16px;
+	}
+	
+	div#footer
+	{
+		left:auto;
+		right:auto;
+		bottom:auto;
+		clear:both;
+		position:inherit;
+		width:92%;
+	}
+	
+	/* Searchbox styles ------------- 
+	---------------------------------*/
+	
+	div#searchbox
+	{
+		margin-left:48px;
+		margin-right:6px;
+		margin-bottom:-32px;
+		z-index:10;
+		position:relative;
+	}
+	
+	div#searchbox form
+	{
+		display:block;
+	}
+	
+	div#searchbox .search-input
+	{
+		float:none;
+		display:block;
+		width:100%;
+		margin:2px;
+		padding-right:32px;
+		
+		/* CSS 3 Magic to make the input fill the available area */
+		
+		box-sizing: border-box; /* css3 rec */
+        -moz-box-sizing: border-box; /* ff2 */
+        -ms-box-sizing: border-box; /* ie8 */
+        -webkit-box-sizing: border-box; /* safari3 */
+        -khtml-box-sizing: border-box; /* konqueror */
+	}
+	
+	div#searchbox .search-submit
+	{
+		float:right;
+		margin-top:-25px;
+	}
+	
+	/* Navigation styles ------------ 
+	---------------------------------*/
+	
+	div#navigation
+	{
+		cursor:pointer;
+		padding:38px 0 0 0;
+		width:100%;
+		
+		background:url(../icons/24/bended-arrow-down.png) no-repeat 12px 4px;
+	}
+	
+	div#navigation.toggled
+	{
+		padding-bottom:8px;
+		background-image:url(../icons/24/bended-arrow-up.png)
+	}	
+	
+	div#navigation.toggled ul
+	{
+		display:block;
+	}
+	
+	div#navigation ul
+	{
+		display:none;
+		cursor:auto;
+		width:100%;
+	}
+
+	div#navigation ul li a.i-24, 
+	div#navigation ul li span.i-24, 
+	div#navigation ul li a.ic, 
+	div#navigation ul li span.ic
+	{
+		padding-left:40px;
+		background-position:8px center;
+	}
+	
+	div#navigation ul li a.ic, 
+	div#navigation ul li span.ic
+	{
+		background-position:4px center;
+	}
+	
+	div#navigation ul li a, 
+	div#navigation ul li span
+	{
+		padding:8px 48px 8px 40px;
+		text-align:left;
+	}
+
+	/* Panel Styles ----------------- 
+	---------------------------------*/
+	
+	.panel
+	{
+		margin-bottom:16px;
+	}
+	
+	.panel .panel-content
+	{
+		padding:12px;
+	}
+	
+	/* Table Styles ----------------- 
+	---------------------------------*/
+	
+	table.table
+	{
+		table-layout:fixed;
+	}
+	
+	.table thead tr th
+	{
+		padding:10px 2px;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	
+	.table tbody td, 
+	.table tfoot td
+	{
+		padding:8px;
+	}
+
+	div.dataTables_wrapper .dataTables_length, 
+	div.dataTables_wrapper .dataTables_filter
+	{
+		display:block;
+		float:none;
+		width:auto;
+		background-color:#cccccc;
+		text-align:left;
+	}
+	
+	div.dataTables_wrapper .dataTables_paginate
+	{
+		margin:10px 8px;
+	}
+	
+	/* Summary List styles ---------- 
+	---------------------------------*/
+	
+	ul.summary li
+	{
+		font-size:12px;
+		padding:0;
+	}
+	
+	ul.summary li span
+	{
+		font-size:24px;
+	}
+	
+	/* Toolbar styles --------------- 
+	---------------------------------*/
+	
+	div.panel-toolbar ul li a, 
+	div.panel-toolbar ul li span
+	{
+		text-indent:-9999px;
+		padding-right:8px;
+		background-position:center center;
+	}
+	
+	/* Form styles ------------------ 
+	---------------------------------*/
+	
+	.form .form-row
+	{
+		padding:4px 8px;
+	}
+	
+	.form .button-row
+	{
+		padding:6px 8px;
+	}
+	
+	.form-message
+	{
+		padding-top:10px;
+		padding-bottom:10px;
+		background-position:12px 7px;
+	}
+	
+	.form-col-1-8, .form-col-2-8, 
+	.form-col-3-8, .form-col-4-8, 
+	.form-col-5-8, .form-col-6-8, 	
+	.form-col-7-8, .form-col-8-8
+	{
+		padding:4px 1px;
+	}
+	
+	.form-cols
+	{
+		padding:0 8px;
+	}
+	
+	
+	/* Login Form styles ------------ 
+	---------------------------------*/	
+	
+	div#login .form .form-row
+	{
+		padding:12px 0;
+	}
+	
+	/* Report styles ---------------- 
+	---------------------------------*/
+	
+	.report-container
+	{
+		margin-bottom:16px;
+	}
+	
+	/* Wizard styles ---------------- 
+	---------------------------------*/	
+
+	.wizard ul li
+	{
+		width:0;
+		padding-right:65px;
+	}
+	
+	.wizard ul li:first-child
+	{
+		padding-left:12px;
+	}
+	
+	.wizard ul li:last-child
+	{
+		padding-right:52px;
+	}	
+	
+	.wizard ul li a, 
+	.wizard ul li span
+	{
+		text-indent:-9999px;
+	}
+	
+	/* Plupload Themer -------------- 
+	---------------------------------*/
+	
+	.plupload_header_text
+	{
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	
+	/* Error Page -------------------
+	---------------------------------*/
+	
+	div#error-container
+	{
+		background:none !important;
+	}
+	
+	div#error-code
+	{
+		padding:0;
+		background:none !important;
+	}
+	
+	div#error-code h1
+	{
+		color:#323232 !important;
+		margin-bottom:0 !important;
+	}
+	
+	/* Hide Themer ------------------ 
+	---------------------------------*/
+	
+	div#themer
+	{
+		display:none;
+	}
+}

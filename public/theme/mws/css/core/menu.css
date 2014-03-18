@@ -1,0 +1,33 @@
+#menu {
+    margin-top: 58px;    
+    background: url('../../images/menu.png') repeat-x;
+    /*background: url('../../images/core/gallery-overlay.png') repeat-x;*/
+    background-color: #2f2f2f;
+    position: relative;
+    z-index: 1;
+    height: 30px;
+    clear: both;
+    padding: 0px;
+    min-width: 900px;
+    border: none;
+    
+}
+#menu > ul.left {float: left;}
+#menu > ul.right {float: right;}
+#menu > ul {position: relative;margin: 0;padding: 0;}
+#menu > ul ul {list-style: none;margin: 0;padding: 0;background: url('../../images/transparent.png');}
+#menu > ul a {display: block;color: #FFFFFF;text-decoration: none;padding: 5px;}
+#menu > ul > li + li {background: url('../../images/split.png') center left no-repeat;}
+#menu > ul .top, #menu > ul li li.sfhover {	padding: 7px 15px 5px 17px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;
+	color: #FFFFFF;	text-align: center;
+}
+#menu > ul ul li {	padding: 2px;}
+#menu > ul .selected .top { /*background: url('../../images/core/gallery-overlay.png') repeat-x;*//*background: url('../../images/selected.png') repeat-x;color: #FFFFFF;*/ /*color: #fff;*/ font-weight: bold}
+#menu > ul .selected:hover a.top, #menu > ul .sfhover a.top {}
+#menu > ul .parent {background: url('../../images/arrow-right.png') 95% center no-repeat;}
+#menu > ul li {float: left;list-style: none;}
+#menu > ul li ul {position: absolute;}
+#menu > ul li li {clear: both;}
+#menu > ul li ul a {color: #FFFFFF;height: 15px;width: 145px;}
+#menu > ul li ul ul {margin: -27px 0 0 157px;}
+#menu > ul li li:hover, #menu > ul li li.sfhover {background: #333;color: #000000;}

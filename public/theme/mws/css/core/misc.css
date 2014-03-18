@@ -1,0 +1,291 @@
+/* Pagination */
+
+.pagination
+{
+        padding: 10px;
+	text-align:center;
+	margin:auto;
+}
+
+.pagination a
+{
+    border: solid 1px #cccccc; padding: 5px; text-decoration: none; color: #4f4f4f;
+}
+
+.pagination.left
+{
+	text-align:left;
+}
+
+.pagination.right
+{
+	text-align:right;
+}
+
+.pagination ul li
+{
+	margin:0;
+	display:inline;
+	list-style:none;
+}
+
+.pagination ul li .paging-button
+{
+	text-align:center;
+	padding:3px 9px;
+	margin:4px 1px;
+	border:1px solid #cccccc;
+	text-decoration:none;
+	color:#545454;
+	background:#f0f0f0;
+	
+	/* CSS 3 */
+	
+	-webkit-border-radius:4px;
+	-o-border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;
+}
+
+.pagination ul li .paging-button.current
+{
+	border-color:#323232;
+	color:#ffffff;
+	background-color:#323232;
+}
+
+.pagination ul li .paging-button.disabled
+{
+	color:#d0d0d0;
+	cursor:default;
+}
+
+/* Wizard Navigation */
+
+.wizard ul
+{
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+.wizard
+{
+	background:#eaeaea url(../../images/core/wizard-bg.png) repeat-x left top;
+	border-bottom:1px solid #dddddd;
+}
+
+.wizard ul li
+{
+	float:left;
+	list-style:none;
+	margin:0; padding:0;
+	padding:0 25px;
+	margin-right:-25px;
+	margin-bottom:-1px;
+	border-right:1px solid #d6d6d6;
+	background:url(../../images/core/wizard.png) no-repeat left -50px;
+	
+	display:block;
+	max-width:250px;
+	max-height:50px;
+	overflow:hidden;
+}
+
+.wizard ul li.done a, 
+.wizard ul li.done span
+{
+}
+
+.wizard ul li.current a, 
+.wizard ul li.current span
+{
+	color:#666666;
+}
+
+.wizard ul li.disabled a, 
+.wizard ul li.disabled span
+{
+	color:#dddddd;
+}
+
+.wizard ul li a.i-24, 
+.wizard ul li a.ic-16, 
+.wizard ul li span.i-24, 
+.wizard ul li span.ic-16
+{
+	background-position:12px center;
+	padding-left:40px;
+}
+
+.wizard ul li:first-child
+{
+	background-position:-25px -50px;
+	padding-left:12px;
+}
+
+.wizard ul li:last-child
+{
+	padding-right:12px;
+}
+
+.wizard ul li:first-child.current, 
+.wizard ul li:first-child:hover.current
+{
+	background-position:-25px top;
+}
+
+.wizard ul li:first-child:hover
+{
+	background-position:-25px -100px;
+}
+
+.wizard ul li.current, 
+.wizard ul li.current:hover
+{
+	background-position:left top;
+}
+
+.wizard ul li:hover
+{
+	background-position:left -100px;
+}
+
+
+.wizard ul li a, 
+.wizard ul li span
+{
+	display:block;
+	line-height:50px;
+	text-decoration:none;
+	padding:0 16px;
+	color:#999999;
+}
+
+/* Summary */
+
+ul.summary
+{
+	margin:0; 
+	padding:0;
+}
+
+ul.summary li
+{
+	padding:0; margin:0;
+	list-style-type:none;
+	font-size:14px;
+	color:#666666;
+	padding:2px 4px;
+	border-bottom:1px solid #bbbbbb;
+	border-top:1px solid #ffffff;
+	
+	overflow:hidden;
+	display:block;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+ul.summary li:first-child
+{
+	border-top:0;
+}
+
+ul.summary li:last-child
+{
+	border-bottom:0;
+}
+
+ul.summary li span
+{
+	font-size:26px;
+	text-align:right;
+	margin-right:3px;
+	width:80px;
+	color:#444444;
+	display:inline-block;
+}
+
+/* Toolbar */
+
+div.panel-toolbar
+{
+    height: 35px;
+    border-bottom:1px solid #dddddd;
+    background:#eaeaea url(../../images/core/toolbar.png) repeat-x left top;        
+}
+
+div.panel-toolbar.bottom
+{
+	border-top:1px solid #dddddd;
+}
+
+div.panel-toolbar ul, 
+div.panel-toolbar ul li
+{
+	list-style:none;
+	padding:0; margin:0;
+}
+
+div.panel-toolbar.right ul
+{
+	float:right;
+}
+
+div.panel-toolbar ul
+{
+	float:left;
+}
+
+div.panel-toolbar.right ul li
+{
+	border-right:0;
+	border-left:1px solid #d0d0d0;
+}
+
+div.panel-toolbar ul li
+{
+	display:block;
+	float:left;
+	border-right:1px solid #d0d0d0;
+}
+
+div.panel-toolbar ul li a, 
+div.panel-toolbar ul li span
+{
+	text-decoration:none;
+	color:#666666;
+	padding:8px 12px;
+	display:block;
+	cursor:pointer;
+	
+	/* CSS 3 */
+	
+	-webkit-box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;
+	-moz-box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;
+	-o-box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;
+	-khtml-box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;
+	box-shadow:inset 1px 0px 0px rgba(255, 255, 255, 0.75), inset 0px 1px 0px #ffffff;
+}
+
+div.panel-toolbar ul li a.ic-16, 
+div.panel-toolbar ul li span.ic-16
+{
+	padding-left:32px;
+	background-position:12px center;
+}
+
+div.panel-toolbar ul li a:active, 
+div.panel-toolbar ul li span:active
+{
+	background-color:#efefef;
+	
+	/* CSS 3 */
+	
+	-webkit-box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+	-moz-box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+	-o-box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+	-khtml-box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+	box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+}
