@@ -9,11 +9,13 @@ if(isset($_REQUEST['execute_mode'])) {
 
 function params_session() {
         //$_SESSION['execute_mode']="PREPARE";//EXECUTE
-        $_SESSION['project'] = "SAI";
-        $_SESSION['target_menu'] = ""; 
-        $_SESSION['language'] = "es_es";
-        $_SESSION['firstTimeIn'] = ""; 
-        $_SESSION['latestRequest'] = $_REQUEST;
+    //if($_REQUEST){
+        //$_SESSION['project'] = "SAI";
+        $_SESSION['reportico']['project'] = "SAI";
+        $_SESSION['reportico']['target_menu'] = ""; 
+        $_SESSION['reportico']['language'] = "es_es";
+        $_SESSION['reportico']['firstTimeIn'] = ""; 
+        $_SESSION['reportico']['latestRequest'] = $_REQUEST;
         //$_SESSION['template'] = ""; 
         $_SESSION['forward_url_get_parameters'] =""; 
         //$_SESSION['linkbaseurl'] = "/../reports/run.php";
@@ -36,4 +38,5 @@ function params_session() {
         $_SESSION['target_show_criteria'] = 1;
         $_SESSION['run_ok'] = 1;
         $_SESSION['show_refresh_button'] = 0;
-    }
+        //}
+}

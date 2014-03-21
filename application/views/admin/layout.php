@@ -61,33 +61,41 @@
     </style>
 </head>
 <body>
+    <?php $arrUser =  $this->session->userdata("arrUser"); ?>
    <div id="header"   class="clearfix">				
         <div id="logo-container" >
                 <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
                 <div id="mws-logo-wrap" ><?php echo img(array('src'=>"public/images/logo_iasd.jpg", 'height'=>'45','style'=>'margin-top:5px;'))?></div>
                 
-        </div>    
+        </div>  
+      
        <div style="float: left; padding-left:10%; padding-top: 10px; font-weight: bold; font-size: 135%">
-           <?php /*SISTEMA DE ADMINISTRACION DE IGLESIA V 0.0.1 [SAI] */?>
-           Sistema de Administraci&oacute;n de Iglesia V 0.0.1 ( SAI )
-       </div>
-        <div id="user-tools" class="clearfix">
+           
+           Sistema de Administraci&oacute;n de Iglesia V 1.0 ( SAI )
+       </div> 
+        <div id="user-tools" class="clearfix" >
             <div id="user-info" class="">
+                
                 <?php /*
                 <div id="user-photo">
                         <img src="example/profile.jpg" alt="User Photo" />
                 </div>*/?>
                 
                 <?php /*echo img("public/images/icons/application_side_contract.png")?>&nbsp;<?php echo anchor("admin/app/logout","Salir") */?>
-                <div id="user-functions">
-                    <div id="username">
-                        <b><?php echo $arrUser['nombre'].' '.$arrUser['apellidos']?></b>
+                <div id="user-functions" >
+                    <div id="username" align="right">
+                        <b><?php echo $arrUser['nombre']?></b>&nbsp;&nbsp;
+                        &nbsp;<?php echo anchor("app/logout", img("public/images/icons/application_side_contract.png")." Salir ")?>
+                        
+                        
                     </div>
-                    <ul>
-                        <?php /*<li><a href="#">Mi Perfil</a></li>
-                        <li><a href="#">Change Password</a></li>*/?>
-                        <li><?php echo anchor("app/logout", img("public/images/icons/disconnect.png")." Salir del sistema")?></li>
-                    </ul>
+                    <div style="font-size:12px;">
+                        <?php if($_SESSION['sai_conf']['iglesia_nombre']) echo "IGLESIA: ".$_SESSION['sai_conf']['iglesia_nombre']?>
+                        
+                    </div>
+                    <?/*<ul>                    
+                        <li><?php echo anchor("app/logout", img("public/images/icons/application_side_contract.png")." Salir ")?></li>
+                    </ul> */?>
                 </div>
             </div>    
         </div>
@@ -95,7 +103,8 @@
     </div> 
     <?php $this->load->view("admin/menu");?>
     
-    <div id="content">         
+    <div id="content">       
+            
             <?php echo $msg?>
             <?php echo $layout_content?>
     </div>

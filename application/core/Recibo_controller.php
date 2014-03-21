@@ -15,11 +15,12 @@ class Recibo_Controller extends Admin_Controller {
         $this->load->model('gasto_tipo_model');
         $this->load->model('iglesia_departamento_model');
         
-        $this->load->library('grocery_CRUD');
+        
     }
     
     public function index($semanal_id=0){
         
+        $this->load->library('grocery_CRUD');        
         $crud = new grocery_CRUD();
         
         $recibo_tipo_id = (int)$this->recibo_tipo_id;
@@ -258,7 +259,5 @@ class Recibo_Controller extends Admin_Controller {
         $tr['detalle'] = array('recibo_tipo_id'=>$recibo_tipo_id);
         $this->load->view("admin/recibo/form_detalle",$tr);
     }
-    
-    
-    
+        
 }

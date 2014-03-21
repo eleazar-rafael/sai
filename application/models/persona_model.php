@@ -14,10 +14,11 @@ class persona_model extends MY_Model{
         $this->list = $list;
     }
     
-    function cbo_persona($opInicial =""){
+    function cbo_persona($opInicial ="", $iglesia_id=0){
+        
         $nombre = " trim(concat( ifnull( nombre ,'') , ' ', ifnull( apellido_paterno ,'') , ' ', ifnull( apellido_materno ,''))) ";
         return $this->get_cbo($this->table,"id, $nombre as nombre ",
-                              array('ifnull(borrado,0)' => 0), ' nombre , apellido_paterno , apellido_materno asc' ,$opInicial);       
+                              array('ifnull(borrado,0)' => 0, 'iglesia_id'=>(int)$iglesia_id), ' nombre , apellido_paterno , apellido_materno asc' ,$opInicial);       
         //concat( nombre , apellido_paterno , apellido_materno )
     }
 }

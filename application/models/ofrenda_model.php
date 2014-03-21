@@ -48,7 +48,7 @@ class ofrenda_model extends MY_Model{
         $anual = $this->get_anual($mensual['periodo_anual_id']);
         
         $str = anchor("admin/periodo_anual/index","Anuales");        
-        $str .= " / ".anchor("admin/periodo_mensual/".$anual['id'],$anual['nombre']);
+        $str .= " / ".anchor("admin/periodo_mensual/index/".$anual['id'],$anual['nombre']);
         $str .= " / ".$mensual['nombre'];
         //$str .= " / ".anchor("admin/ofrenda/semanal/".$mensual['id'],$mensual['nombre'])." / Recibos";
         return $str; 

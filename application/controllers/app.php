@@ -24,13 +24,15 @@ class App extends CI_Controller {
         $post = $this->input->post('login');
         if($post['username'] and $post['password'])
         {  
+            $this->load->model("iglesia_model");
             $arrUser =  $this->sis_usuario_model->get_user($post['username'],$post['password']);
            
             if($arrUser){
                 $this->session->set_userdata("arrUser",$arrUser);
                 unset($_SESSION['sai_conf']);
+                $iglesia = $this->iglesia_model->get_data($arrUser['iglesia_id']);
                 $_SESSION['sai_conf']['iglesia_id'] = $arrUser['iglesia_id'];
-                
+                $_SESSION['sai_conf']['iglesia_nombre'] = $iglesia['nombre'];
                 //$this->load->library( 'nativesession' );
                 //$this->nativesession->set( 'iglesia_id', 1 );
                 redirect("admin/app/index");				

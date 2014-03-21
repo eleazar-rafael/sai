@@ -50,7 +50,7 @@
 	require_once('reportico.php');
 	
 	//20140312-azlara-added- grant access only when session is already open from SAI ----
-	$continuar = (( isset($_SESSION['iglesia_id']) or isset($_SESSION['run_ok']) ) ? 1 : 0);
+	$continuar = (( isset($_SESSION['sai_conf']['iglesia_id']) or isset($_SESSION['run_ok']) ) ? 1 : 0);
 	if( $continuar ==0  ) {
 		header('HTTP/1.1 403 Forbidden');
 		print '<h1>Error: Acceso restringido<br/></h1>';
@@ -164,4 +164,5 @@
 	$q->execute($s_mode, TRUE);
 	//----------------------------------
 
-	//ob_end_flush();
+	ob_end_flush();
+//echo "<pre>";print_r($_SESSION); echo "</pre>";

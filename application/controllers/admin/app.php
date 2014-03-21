@@ -25,7 +25,9 @@ class App extends Admin_Controller {
     
     public function update(){
         if( $this->input->server('REQUEST_METHOD') == 'POST' ){
+            $iglesia = $this->iglesia_model->get_data($this->input->post("iglesia_id"));
             $_SESSION['sai_conf']['iglesia_id'] = $this->input->post("iglesia_id");
+            $_SESSION['sai_conf']['iglesia_nombre'] = $iglesia['nombre'];
             $_SESSION['sai_conf']['periodo_anual_id'] = $this->input->post("periodo_anual_id");
             $_SESSION['sai_conf']['periodo_mensual_id'] = $this->input->post("periodo_mensual_id");
             $_SESSION['sai_conf']['periodo_semanal_id'] = $this->input->post("periodo_semanal_id");

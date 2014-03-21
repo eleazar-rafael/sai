@@ -25,7 +25,7 @@ class Admin_Controller extends MY_Controller
         }
         
         //VARIABLES GENERALES
-        $this->data['iglesia_id'] = 1;
+        $this->data['iglesia_id'] = $_SESSION['sai_conf']['iglesia_id'];
         
         //WARNING Y SUCCESS
         $this->data['error_warning'] = (isset($this->error['warning']))? $this->error['warning'] : null;        

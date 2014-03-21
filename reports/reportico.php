@@ -326,6 +326,7 @@ class reportico extends reportico_object
 	var $status_message = "";
 	var $reports_path = "projects/reports";
 	var $admin_path = "projects/admin";
+        
 
 	var $framework_parent = false;
 	var $framework_type = false;

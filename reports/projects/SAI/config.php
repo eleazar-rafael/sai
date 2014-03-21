@@ -13,7 +13,7 @@ define('SW_PROJECT_PASSWORD', '');
 // Location of Reportico Top Level Directory From Browser Point of View
 define('SW_HTTP_BASEDIR', './');//http://blog.developer.dom/sai/reports/
 //define('SW_HTTP_URLHOST', 'http://blog.developer.dom/sai/reports/');
-define('SW_HTTP_URLHOST', 'http://localhost/dever/sai/reports/');
+define('SW_HTTP_URLHOST', 'http://localhost/sai/reports/');
 define('SW_DEFAULT_PROJECT', 'reports');
 
 // Project Title used at the top of menus

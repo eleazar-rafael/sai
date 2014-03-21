@@ -674,7 +674,7 @@ a:visited
     margin: 0px 0px 0px 0px;
     float: left;
 }
-
+.swRepBackBox{display:none!important}
 .swRepPrintBox .swLinkMenu,
 .swRepRefreshBox .swLinkMenu,
 .swRepBackBox .swLinkMenu
