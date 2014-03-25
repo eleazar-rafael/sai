@@ -1,5 +1,6 @@
 <h1 class="swTitle"><?php echo($title); ?></h1>
 <form action="<?php echo base_url()?>reports/sai.php" method="POST" name="topmenu" id="criteriaform" class="swPrpForm" target="_blank">
+  <input type="hidden" value="true" name="sai_reporte">
   <input type="hidden" value="1" name="user_criteria_entered">
   <input type="hidden" value="0" name="target_show_criteria">
   <input type="hidden" value="1" name="target_show_group_headers">
@@ -11,6 +12,7 @@
   <input type="hidden" value="<?php echo($xml); ?>" name="xmlout">
   <input type="hidden" value="EXECUTE" name="execute_mode">
   <input type="hidden" value="0" name="show_refresh_button">
+  
   <!-- input type="radio" checked="" value="TABLE" name="target_style" id="rpt_style_detail">
   <input type="radio" value="FORM" name="target_style" id="rpt_style_form" -->
   <table id="critbody" class="swPrpCritBox">

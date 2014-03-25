@@ -98,7 +98,8 @@ function set_up_reportico_session()
         // If no session current then create a new one
         if ( !$session_name || !isset($_SESSION))
         {
-		    session_start();
+                    if(!isset($_REQUEST['sai_reporte'])) //MODIFICADO POR ELEAZAR 2014-03-24
+                        session_start();
 		    session_regenerate_id(false);
         }
 
@@ -107,17 +108,26 @@ function set_up_reportico_session()
 		$session_name = session_id();
 		if (isset($_REQUEST['clear_session'])) 
 		{
-            initialize_reportico_namespace(reportico_namespace());
+                    initialize_reportico_namespace(reportico_namespace());
 		}
 	}
 	else
 	{
-        if ( session_id() != $session_name )
-        {
-		    session_id($session_name);
-		    session_start();
-        }
+                if ( session_id() != $session_name )
+                {
+                            session_id($session_name);
+                            
+                            if(!isset($_REQUEST['sai_reporte'])) //MODIFICADO POR ELEAZAR 2014-03-24
+                            session_start();
+                }
 		$session_name = session_id();
+                
+                /*session_id($session_name);
+                if(!isset($_REQUEST['reporte']))
+                    @session_start(); //MODIFICADO
+		$session_name = session_id();
+                $activesession = $session_name;
+                 */
 	}
 }
 
@@ -1462,7 +1472,7 @@ function reportico_session_name()
 */
 function reportico_namespace()
 {
-    global $g_session_namespace_key;
+    global $g_session_namespace_key; 
     return $g_session_namespace_key;
 }
 
