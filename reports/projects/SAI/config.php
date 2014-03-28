@@ -24,32 +24,24 @@ define('SW_ALLOW_OUTPUT', true);
 define('SW_ALLOW_DEBUG', true);
 
 // Identify whether Show Criteria is default option
-define('SW_DEFAULT_SHOWCRITERIA', false);
+define('SW_DEFAULT_SHOWCRITERIA', FALSE);
 
 // Specification of Safe Mode. Turn on SAFE mode by specifying true.
 // In SAFE mode, design of reports is allowed but Code and SQL Injection
 // are prevented. This means that the designer prevents entry of potentially
 // cdangerous ustom PHP source in the Custom Source Section or potentially
 // dangerous SQL statements in Pre-Execute Criteria sections
-define('SW_SAFE_DESIGN_MODE',true);//false
+define('SW_SAFE_DESIGN_MODE', false);
 
 // If false prevents any designing of reports
 define('SW_ALLOW_MAINTAIN', true);
 
 //  Stylesheets
-//define('SW_STYLESHEET', 'stylesheet/cleanandsimple.css');
-define('SW_STYLESHEET','stylesheet/bluetheme.css');
-//-----------------------------------------------------------------
-//20140314-azlara-added to change style
-if(isset($_SESSION['run_ok']) and (int)$_SESSION['run_ok']==1)         
-    define('SW_STYLESHEET_SAI','reports/stylesheet/sai.css');
-else
-    define('SW_STYLESHEET_SAI','stylesheet/sai.css');
-//-----------------------------------------------------------------
+define('SW_STYLESHEET', 'stylesheet/cleanandsimple.css');
 
 // Identify whether to use AJAX handling. Enabling with enable Data Pickers,
 // loading of partial form elements and quicker-ti-use design mode
-define('AJAX_ENABLED',true);
+define('AJAX_ENABLED', true);
 
 // Location of Reportico Top Level Directory From Browser Point of View
 // DB connection details for ADODB

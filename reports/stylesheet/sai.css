@@ -1,14 +1,30 @@
-
 /* ------------------------------------------------------------------------------------*/
-/* ----------------------         Styles for Reportico         ------------------------*/
+/* ----------------------         Styles for TS Licenses       ------------------------*/
 /* ------------------------------------------------------------------------------------*/
 
-
-/*form,table,input,a,div	
+form,table,input,a,div	
 { 
     font: 10pt Ariel,Arial,Verdana;
-}*/
+}
 
+
+#reportico_container
+{
+    background-color: #ffffff;
+}
+
+.swPrpToolbarPane input
+{
+	/*display: none!important;20140326-azlara-added to hide toolbar pane*/
+    float: right;
+    font-weight: 700;
+    margin: 10px 5px 0px 0px;
+    border: 1px solid #888888;
+    text-decoration: none;
+    background-color: #ffffff;
+    height: 32px;
+    cursor: pointer;
+}
 
 #swPrpSubmitPane input
 {
@@ -22,7 +38,10 @@
     cursor: pointer;
 }
 
-
+.icon-48-reportico
+{
+    background: url('../images/icon-reportico-48.png') no-repeat left;`I   
+}
 
 .swPrpCritSel select
 {
@@ -65,8 +84,8 @@
 }
 .swDateField { width: 100px; }
 
-.swPrpTextField { width: 100%; /*}*/
-/*{*/
+.swPrpTextField { width: 100%; }
+{
     margin: 0px 0px 0px 0px;
     padding: 2px 2px 2px 2px;
     border: 1px solid #d0ccc9;
@@ -81,9 +100,6 @@
 {
     margin: 0px 0px 0px 0px;
     padding: 2px 2px 2px 2px;
-    background: #ff0000;
-    border: 1px solid #d0ccc9;
-    border-width: 1px 1px 1px 1px;
     color: #505050;
     width: 20px;
 }
@@ -121,7 +137,7 @@ td.loading, div.loading {
 }
 
 td.loading *, div.loading * {
-    opacity: .8;
+    opacity: .9;
 }
 
 
@@ -133,7 +149,7 @@ td.loading *, div.loading * {
 /* Table Container for Menu Selections */
 .swMenuBody 
 { 
-    background-color: #efefef;
+    background-color: #ffffff;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -142,12 +158,12 @@ td.loading *, div.loading * {
 
 .swMenuForm
 {
-    background-color: #e6f4ca; 
+/*	background-color: #e6f4ca; */
     background-color: #ffffff;
-    border: solid 1px #333333;
+    border: solid 1px #AAAAAA;
 }
 
-/*.swMenu
+.swMenu
 {
     width: 80%;
     text-align: center;
@@ -170,8 +186,7 @@ a:link {
 a:visited
 {
     color: #303030;
-}*/
-
+}
 
 /* Style for Menu Header */
 .swMenuItemHeader
@@ -186,17 +201,18 @@ a:visited
 }
 
 /* Style for Menu Items Header */
-/*.swMenuItem
+.swMenuItem
 {
     text-align: center;
     padding-top: 1px;
     padding-bottom: 1px;
     border: none;
-}*/
+}
 
 /* Style for Menu Header */
-/*.swMenuItemLink
+.swMenuItemLink
 {
+    color: #000000 !important;
     color: inherit;
     font-size: 10pt;
     border: none;
@@ -205,7 +221,8 @@ a:visited
 
 .swMenuItemLink:hover 
 {
-    color: #7070CC;
+    background-color: inherit !important;
+    color: #7070CC !important;
 }
 
 .swToggle, .swToggle:link, .swToggle:visited
@@ -224,7 +241,6 @@ a:visited
 
 .swLinkMenu 
 { 
-    display:none;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
@@ -237,19 +253,16 @@ a:visited
     padding-bottom: 5px;
 }
 
-a.swLinkMenu 
-{ 
-}
-
 .swLinkMenu:hover
 {
     border: solid thin #000000;	
-}*/
+    color: #000000 !important;
+    background-color: #F2F2f2 !important;
+}
 
 /* ------------------------------------------------------------------------------------*/
 /* -----------------------------Styles for Prepare Execute Mode -----------------------*/
 /* Table container for whole Report */
-.swLinkMenu{display:none;}
 .swPrpBody 
 { 
     margin: 0;
@@ -265,7 +278,7 @@ a.swLinkMenu
     text-align: left;
     margin-left: 0%;
     width: 100%;
-    border: solid 1px #333333;
+    border: solid 1px #AAAAAA;
 }
 
 .swPrpTopMenu
@@ -294,8 +307,7 @@ a.swLinkMenu
     font-size: 18pt;
     text-align: center;
     border-bottom: 1px solid #d0ccc9;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin: 0px !important;
     padding-bottom: 10px;
     padding-top: 20px;
     padding-left: 20px;
@@ -306,6 +318,7 @@ a.swLinkMenu
 
 .swPrpCritBox
 {
+	/*display:none!important; 20140326-azlara-added to hide criteria header*/
     width: 100%;
     border: none;
     border-width: 0px;
@@ -314,6 +327,7 @@ a.swLinkMenu
 
 .swPrpCritEntry
 {
+	display:none!important;/*20140326-azlara-added to hide criteria inputs */
     background-color: #f8f8f8;
     width: 50%;
     vertical-align: top;
@@ -453,19 +467,18 @@ a.swLinkMenu
 /* ----------------------------- i.e for the HTML Report Output -----------------------*/
 /* Report Title Header */
 .swRepTitle 
-{   display:none; 
-    font-size: 14pt;
+{ 
+    font-size: 18pt;
     text-align: center;
-    margin-top: 0px;
+    margin: 0px !important;
     padding-bottom: 10px;
     padding-top: 20px;
     border-bottom: 1px solid #d0ccc9;
     padding-left: 20px;
-    /*background-image: url('bggray.png');*/
+    background-image: url('bggray.png');
     background-repeat: repeat-x;
     background-position: top left;
 }
-
 
 /* Table container for whole Report */
 .swRepBody 
@@ -473,7 +486,7 @@ a.swLinkMenu
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    /*background: #e5e9fc;*/
+    background: #e5e9fc;
     border-right: solid thin #333333;
     border-left: solid thin #333333;
     margin-top: 0px;
@@ -483,7 +496,8 @@ a.swLinkMenu
 /* ------------------ Report Output Main Box --------------*/
 .swRepForm
 {
-}  
+    border: solid 1px #AAAAAA;
+}
 
 /* Table container for each Page of Output */
 .swRepPage
@@ -498,17 +512,19 @@ a.swLinkMenu
     border-collapse: collapse;
 }
 
+.swRepPageFormPage { border-bottom: solid thin #AAAAAA; }
+.swRepPageFormLine { border-bottom: solid thin #AAAAAA; }
+.swRepPageFormBlank { margin-bottom: 20px; }
 
 /* No Rows Information Message */
 .swRepNoRows
 {
-    /*width:          96%;*/
+    width:          96%;
     border: groove thin;
-    
     background-color : #FFFFBB;
-    margin: 30px 20px;
-    padding: 10px;
-    /*font-size: 14pt ;*/
+    margin-top: 60px;
+    margin-left: 2%;
+    font-size: 14pt ;
 }
 
 /* Row of Column Header Labels  */
@@ -519,7 +535,8 @@ a.swLinkMenu
 }
 
 /* Column Header Label  */
-.swRepColHdrRow td
+.swRepColHdrRow td,
+.swRepColHdrRow th
 {
     border-bottom: dotted;
     border-width: 1px;
@@ -532,6 +549,9 @@ a.swLinkMenu
     padding: 2px 2px 1px 2px;
 }
 
+.swRepResultLine:nth-child(even) { background-color: inherit; }
+.swRepResultLine:nth-child(odd) { background-color: inherit; }
+
 .swRepResultLine td a
 {
     text-decoration: underline;
@@ -540,12 +560,41 @@ a.swLinkMenu
 /* Container for Group Headers  */
 .swRepGrpHdrBox
 {
-    border-style: none;
     font-weight: bold;
     font-size: 10pt;
-    width: 100%;
-    padding: 2px 0 2px 0;
-    margin: 4px 0 4px 0;
+    width: 99%;
+    padding-top: 5px;
+    padding-left: 1px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding-bottom: 5px;
+}
+.swRepCriteria
+{
+    border-top: solid 1px #ddddff;
+    font-weight: bold;
+    font-size: 10pt;
+    width: 99%;
+    padding-top: 5px;
+    padding-left: 1px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding-bottom: 5px;
+    background-color: #eeeeee;
+    margin-bottom: 5px;
+}
+
+/* Line for Group Header Data  */
+.swRepGraph
+{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swRepResultGraph
+{
 }
 
 /* Line for Group Header Data  */
@@ -602,34 +651,55 @@ a.swLinkMenu
 {
 }
 
-.swRepBackBox 
-{ 
+.swCSVBox, .swHTMLBox, .swPDFBox, .swPrintBox, .swXMLBox, .swJSONBox
+{
+    width: 30px;
     text-align: left;
-    font-size: 14pt ;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    background-repeat: no-repeat;
     text-decoration: none;
+    float: left;
 }
-.swRepBackButton 
-{ 
-    border: solid;
-    border-width: 1px;
-    border-color : #000000;
-    background-color : #FFFFFF;
+
+.swHTMLBox { background-image: url(../images/printhtml.png); }
+.swCSVBox { background-image: url(../images/printcsv.png); }
+.swPDFBox { background-image: url(../images/printpdf.png); }
+.swJSONBox { background-image: url(../images/printjson.png); }
+.swXMLBox { background-image: url(../images/printxml.png); }
+.swPrintBox { background-image: url(../images/printablehtml.png); }
+
+.swRepRefreshBox,
+.swRepPrintBox,
+.swRepBackBox
+{
+    width: 38px;
+    height: 38px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+}
+
+/*20140326-azlara-added to remove back button on report page*/
+.swRepBackBox{display:none!important}
+.swRepPrintBox .swLinkMenu,
+.swRepRefreshBox .swLinkMenu,
+.swRepBackBox .swLinkMenu
+{
+    width: 32px;
     text-align: left;
-    font-size: 12pt ;
-    font-weight: bold;
-    padding: 5px 5px 5px 5px;
+    padding: 0px;
+    margin: 2px 5px 2px 5px;
     text-decoration: none;
+    float: left;
 }
+
+.swRepPrintBox .swLinkMenu { background-image: url(../images/printer.png); }
+.swRepRefreshBox .swLinkMenu { background-image: url(../images/refreshbutton.png); }
+.swRepBackBox .swLinkMenu { background-image: url(../images/backbutton.png); }
+
 .swRepBackButton:hover 
 {
     background: #e5ecf9;
-}
-
-tr td.swRepResultGraph
-{
-    text-align: center;
 }
 
 
@@ -660,7 +730,7 @@ tr td.swRepResultGraph
     margin-left: 0%;
     background-color: #ffffff;
     width: 100%;
-    border: solid 1px #333333;
+    border: solid 1px #AAAAAA;
 }
 
 /* ------------------ Top Menu Box with Main Menu, Admin Menu options  --------------*/
@@ -896,6 +966,10 @@ tr td.swRepResultGraph
     font-size: 10pt;
 }
 
+.swMntSetField textarea
+{
+    font-size: 10pt;
+}
 
 .swMntHelpLink
 { 
@@ -956,13 +1030,21 @@ tr td.swRepResultGraph
 
     body { font-size: 10pt }
     .swLinkMenu { display: none; }
+    .swRepForm { border: none; }
     .swRepBody { width: 100%; margin: 0; border: none; }
+/* Column Header Label  */
+    .swRepColHdrRow td,
+    .swRepColHdrRow th
+    {
+        padding-left: 2px;
+        border-bottom: solid;
+        border-width: 1px;
+        border-color : #000000;
+        color : #000000;
+    }
+
+    .swNewPage { page-break-before: always; }
+
     .swRepTitle { font-size: 18pt; text-align: center; margin-top: 0px; border: none;}
     .swMntForm { text-align: left; margin-left: 0%; background-color: #ffffff; border: none; }
-    @page { margin-top: 200; padding-top : 100px; }
-    
-    /*----------------------EXCELENCIA--------------------------------------*/    
-    #cart,#welcome,.links,#menu, .breadcrumb, #footer, #powered, form{display: none;}    
-    .rp-titulo{text-align: center;}
 }
-

@@ -29,6 +29,8 @@
  * @version $Id: index.php,v 1.7 2013/08/08 18:20:39 peter Exp $
  */
 
-header("Location: run.php?project=admin&execute_mode=ADMIN&clear_session=1");
-
-?>
+if(getenv('APPLICATION_ENV')=='development') {
+	header("Location: run.php?project=admin&execute_mode=ADMIN&clear_session=1");
+} else {
+	echo('<html><h2>SAI &copy; '.date("Y").'</h2></html>');	
+}

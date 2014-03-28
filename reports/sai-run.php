@@ -32,16 +32,9 @@
  * @version $Id: run.php,v 1.14 2013/08/08 18:20:39 peter Exp $
  */
 
-	//20140326-azlara-added- run only in development environment
-	if(getenv('APPLICATION_ENV')!='development') {
-		header('HTTP/1.1 403 Forbidden');
-		print '<h1>Error: Access Denied<br/></h1>';
-		die("You do not have access to this section.");
-	}
-	//
     // set error reporting level
-	error_reporting(E_ALL);
-
+	error_reporting(E_ALL^E_NOTICE);
+	
     // Set the timezone according to system defaults
     date_default_timezone_set(@date_default_timezone_get());
 
@@ -58,16 +51,26 @@
 
     // Only turn on output buffering if necessary, normally leave this uncommented
 	//ob_start();
+	
+	//20140326-azlara-added- allow access only when session is already open from SAI site
+	$is_valid_access = (( isset($_SESSION['sai_conf']['iglesia_id']) or isset($_SESSION['reportico']['run_ok']) ) ? 1 : 0);
+	if(!getenv('APPLICATION_ENV')||!$is_valid_access) {
+		header('HTTP/1.1 403 Forbidden');
+		print '<h1>Error: Access Denied<br/></h1>';
+		die("You do not have access to run this section($is_valid_access).");
+	}
+	//
 
 	$q = new reportico();
 
     // In design mode, allow sql debugging
-	$q->allow_debug = true;
+	$q->allow_debug = FALSE;
 
     // Specify any URL parameters that should be added into any links generated in Reportico.
     // Useful when embedding in another application or frameworks where requests need to be channelled
     // back though themselves
-	//$q->forward_url_get_parameters = "";
+    //20140326-azlara-uncommented
+	$q->forward_url_get_parameters = "";
 
     // Reportico Ajax mode. If set to true will run all reportico requests from buttons and links
     // through AJAX, meaning reportico will refresh in its own window and not refresh the whole page
@@ -118,8 +121,9 @@
     //$q->access_mode = "<MODE>";
 
     // Default initial execute mode to single report output if REPORTOUTPUT mode specified
-    if ( $q->access_mode == "REPORTOUTPUT" )
-        $q->initial_execute_mode = "EXECUTE";
+    //20140326-azlara-section commented out
+    //if ( $q->access_mode == "REPORTOUTPUT" )
+    //    $q->initial_execute_mode = "EXECUTE";
 
     // The session namespace to use. Only relevant when showing more than one report in a single page. Specify a name
     // to store all session variables for this instance and then when running another report instance later in the script 
@@ -151,6 +155,11 @@
     //$q->user_parameters["your_parameter_name"] = "your parameter value";
 
     // Run the report
-	$q->execute();
+    //20140326-azlara-commented out
+	//$q->execute();
+	
+	//20140326-azlara-added
+	$s_mode = $q->get_execute_mode();
+	$q->execute($s_mode, TRUE);
 
 	//ob_end_flush();
